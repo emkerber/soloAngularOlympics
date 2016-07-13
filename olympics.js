@@ -73,11 +73,21 @@ var randomBadminton = randomOlympian(badminton, 7);
 var randomWrestling = randomOlympian(wrestling, 14);
 var randomGymnastics = randomOlympian(gymnastics, 18);
 
+
 var randomOlympianArray = [randomSynchronizedSwimming, randomTableTennis, randomBadminton, randomWrestling, randomGymnastics];
 
 router.get('/', function(request, response){
+  var randomSynchronizedSwimming = randomOlympian(synchronizedSwimming, 2);
+  var randomTableTennis = randomOlympian(tableTennis, 6);
+  var randomBadminton = randomOlympian(badminton, 7);
+  var randomWrestling = randomOlympian(wrestling, 14);
+  var randomGymnastics = randomOlympian(gymnastics, 18);
+  var randomOlympianArray = [randomSynchronizedSwimming, randomTableTennis, randomBadminton, randomWrestling, randomGymnastics];
+
   console.log(randomOlympianArray);
   response.send(randomOlympianArray);
 })
+
+
 
 module.exports = router;
