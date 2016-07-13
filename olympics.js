@@ -62,31 +62,57 @@ var gymnastics = [
   {sport: 'Gymnastics', name: 'Laura Zeng', hometown: 'Libertyville, IL'}
 ];
 
+
 function randomOlympian(array, length) {
   var i = Math.floor(Math.random() * (length));
   return array[i];
 };
 
-var randomSynchronizedSwimming = randomOlympian(synchronizedSwimming, 2);
-var randomTableTennis = randomOlympian(tableTennis, 6);
-var randomBadminton = randomOlympian(badminton, 7);
-var randomWrestling = randomOlympian(wrestling, 14);
-var randomGymnastics = randomOlympian(gymnastics, 18);
 
+//var randomSynchronizedSwimming = randomOlympian(synchronizedSwimming, 2);
+// var randomTableTennis = randomOlympian(tableTennis, 6);
+// var randomBadminton = randomOlympian(badminton, 7);
+// var randomWrestling = randomOlympian(wrestling, 14);
+// var randomGymnastics = randomOlympian(gymnastics, 18);
 
-var randomOlympianArray = [randomSynchronizedSwimming, randomTableTennis, randomBadminton, randomWrestling, randomGymnastics];
-
-router.get('/', function(request, response){
+router.get('/synchronizedSwimming', function(request, response){
   var randomSynchronizedSwimming = randomOlympian(synchronizedSwimming, 2);
-  var randomTableTennis = randomOlympian(tableTennis, 6);
-  var randomBadminton = randomOlympian(badminton, 7);
-  var randomWrestling = randomOlympian(wrestling, 14);
-  var randomGymnastics = randomOlympian(gymnastics, 18);
-  var randomOlympianArray = [randomSynchronizedSwimming, randomTableTennis, randomBadminton, randomWrestling, randomGymnastics];
-
-  console.log(randomOlympianArray);
-  response.send(randomOlympianArray);
+  response.send(randomSynchronizedSwimming);
 })
+
+router.get('/tableTennis', function(request, response){
+  var randomTableTennis = randomOlympian(tableTennis, 6);
+  response.send(randomTableTennis);
+})
+
+router.get('/badminton', function(request, response){
+  var randomBadminton = randomOlympian(badminton, 7);
+  response.send(randomBadminton);
+})
+
+router.get('/wrestling', function(request, response){
+  var randomWrestling = randomOlympian(wrestling, 14);
+  response.send(randomWrestling);
+})
+
+router.get('/gymnastics', function(request, response){
+  var randomGymnastics = randomOlympian(gymnastics, 18);
+  response.send(randomGymnastics);
+})
+
+//var randomOlympianArray = [randomSynchronizedSwimming, randomTableTennis, randomBadminton, randomWrestling, randomGymnastics];
+
+// router.get('/', function(request, response){
+//   var randomSynchronizedSwimming = randomOlympian(synchronizedSwimming, 2);
+//   var randomTableTennis = randomOlympian(tableTennis, 6);
+//   var randomBadminton = randomOlympian(badminton, 7);
+//   var randomWrestling = randomOlympian(wrestling, 14);
+//   var randomGymnastics = randomOlympian(gymnastics, 18);
+//   var randomOlympianArray = [randomSynchronizedSwimming, randomTableTennis, randomBadminton, randomWrestling, randomGymnastics];
+//
+//   console.log(randomOlympianArray);
+//   response.send(randomOlympianArray);
+// })
 
 
 
