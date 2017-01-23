@@ -10,3 +10,6 @@ Technical Requirements
 Our application will request 5 payloads from five different Express routes (one for each sport). All of the routes should exist inside of an Olympics.js router. The objects returned should follow this template:
 
 { Name: 'John Doe', Origin: 'New York, NY' }
+
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/emkerber/soloAngularOlympics.svg)](https://greenkeeper.io/)
